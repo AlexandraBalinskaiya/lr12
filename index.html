@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Language Learning App</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="jquery-3.7.1.min.js"></script>
+</head>
+<body>
+
+<div class="app-container">
+    <div class="difficulty-container">
+        <p>Difficulty level:</p>
+        <div class="difficulty-options">
+            <label><input type="radio" name="difficulty" value="easy" checked> Elementary</label>
+            <label><input type="radio" name="difficulty" value="medium"> Middle</label>
+            <label><input type="radio" name="difficulty" value="hard"> Hight</label>
+        </div>
+    </div>
+    <div class="card" id="flashcard">
+        <div class="card-word">always</div>
+    </div>
+    <input type="text" id="translation-input" placeholder="Enter translation...">
+    <div class="button-container">
+        <button id="check-button">Check</button>
+    </div>
+    <div class="step-container">
+        <div>Step <span id="current-step">1</span> of <span id="total-steps">10</span></div>
+    </div>
+    <div class="stats-container">
+        <div>Correct: <span id="correct-count">0</span></div>
+        <div>Incorrect: <span id="incorrect-count">0</span></div>
+    </div>
+</div>
+
+<div id="results-modal" class="modal">
+    <div class="modal-content">
+        <span class="close-button">&times;</span>
+        <p>Your language level is: <span id="language-level"></span></p>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
